@@ -9,7 +9,7 @@ resource "aws_vpc" "devenv_vpc" {
   enable_dns_support   = true
 
   tags = {
-    Name = "devenv_vpc"
+    "Name" = "devenv_vpc"
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "devenv_public_subnet" {
   availability_zone       = "us-west-2a"
 
   tags = {
-    Name = "devenv_public_subnet"
+    "Name" = "devenv_public_subnet"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_internet_gateway" "devenv_igw" {
   vpc_id = aws_vpc.devenv_vpc.id
 
   tags = {
-    Name = "devenv_igw"
+    "Name" = "devenv_igw"
   }
 }
 
